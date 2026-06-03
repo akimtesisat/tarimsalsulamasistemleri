@@ -267,12 +267,25 @@
     border-top: 1px solid rgba(255,255,255,0.08);
     display: flex; align-items: center; gap: 16px;
   }
-  .person-avatar {
+  .person-avatar, .person-initials {
     width: 64px; height: 64px; border-radius: 50%;
+    flex: 0 0 64px;
+  }
+  .person-avatar {
     object-fit: contain;
     background: white;
     padding: 3px;
     display: block;
+  }
+  .person-initials {
+    display: flex; align-items: center; justify-content: center;
+    background: linear-gradient(135deg, var(--copper-lt), #ffffff);
+    color: #111111;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.35rem;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    box-shadow: 0 12px 28px rgba(0,0,0,0.22);
   }
   .person-info strong { display: block; font-size: 0.9rem; font-weight: 600; color: var(--white); }
   .person-info span { font-size: 0.75rem; color: var(--text-muted); letter-spacing: 0.05em; }
@@ -434,7 +447,7 @@
 <!-- STATS -->
 <div class="stats-bar">
   <div class="stat-item">
-    <span class="stat-num">20+</span>
+    <span class="stat-num">70+</span>
     <span class="stat-label">Yıllık Deneyim</span>
   </div>
   <div class="stat-item">
@@ -456,13 +469,13 @@
   <div class="services-header">
     <span class="section-tag">Ne Yapıyoruz?</span>
     <h2 class="section-title">Hizmetlerimiz</h2>
-    <p class="section-body">Sulama sistemlerinden mekanik tesisata kadar geniş hizmet yelpazemizle projenizi başından sonuna kadar teslim ediyoruz.</p>
+    <p class="section-body">Yer altı, yer üstü ve yağmurlama sulama sistemlerinde; imalattan fittings ürünlerine kadar geniş ürün yelpazemizle hizmet vermekteyiz.</p>
   </div>
   <div class="services-grid">
     <div class="service-card">
       <span class="service-icon">💧</span>
       <h3 class="service-name">Sulama Sistemleri</h3>
-      <p class="service-desc">Yer altı ve yer üstü sulama sistemleri imalatı, kurulumu ve profesyonel tamiratı. Her ölçekteki proje için özel çözümler.</p>
+      <p class="service-desc">Yer altı ve yer üstü yağmurlama sulama sistemleri imalatı ve tamiratı.</p>
       <div class="service-tag-list">
         <span class="service-tag">Yer Altı</span>
         <span class="service-tag">Yer Üstü</span>
@@ -473,27 +486,26 @@
     <div class="service-card">
       <span class="service-icon">🌧️</span>
       <h3 class="service-name">Yağmurlama Sistemleri</h3>
-      <p class="service-desc">Modern yağmurlama sulama sistemlerinin tasarımı, imalatı ve bakımı. Verimli su kullanımı için akıllı çözümler.</p>
-      <div class="service-tag-list">
-        <span class="service-tag">Tasarım</span>
-        <span class="service-tag">Kurulum</span>
-        <span class="service-tag">Bakım</span>
-      </div>
-    </div>
-    <div class="service-card">
-      <span class="service-icon">⚙️</span>
-      <h3 class="service-name">Sondaj Tulumbası</h3>
-      <p class="service-desc">Derin kuyu sondaj tulumbası kurulum, bakım ve onarım hizmetleri. Yüksek performanslı pompa sistemleri.</p>
+      <p class="service-desc">Modern yağmurlama sulama sistemlerinin tasarımı, imalatı ve bakımı.</p>
       <div class="service-tag-list">
         <span class="service-tag">Kurulum</span>
         <span class="service-tag">Bakım</span>
-        <span class="service-tag">Onarım</span>
       </div>
     </div>
     <div class="service-card">
       <span class="service-icon">🔧</span>
-      <h3 class="service-name">Mekanik Tesisat</h3>
-      <p class="service-desc">Flanş fittings, santrafüj klepesi, küresel vana ve tüm mekanik tesisat malzemeleri ile profesyonel montaj.</p>
+      <h3 class="service-name">Klepe Çeşitleri</h3>
+      <p class="service-desc">Uzun tip klepe, kısa tip klepe, Te klepe ve sac tulumba imalatı ve tamiratı.</p>
+      <div class="service-tag-list">
+        <span class="service-tag">Klepe</span>
+        <span class="service-tag">Tulumba</span>
+        <span class="service-tag">Tamirat</span>
+      </div>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">⚙️</span>
+      <h3 class="service-name">Fittings Malzemeleri</h3>
+      <p class="service-desc">Flanş, fittings malzemeleri, dik çekvalf, küresel vana ve tüm sulama malzemeleri.</p>
       <div class="service-tag-list">
         <span class="service-tag">Flanş</span>
         <span class="service-tag">Vana</span>
@@ -503,19 +515,18 @@
     <div class="service-card">
       <span class="service-icon">🏭</span>
       <h3 class="service-name">Endüstriyel Ürünler</h3>
-      <p class="service-desc">Döküm şiber, klepe kaplin, flanş contaları ve alıcı-verici çıkışları. Geniş ürün stoku ile hızlı tedarik.</p>
+      <p class="service-desc">Döküm vana, klepe lastiği, kaplin lastiği, flanş contaları ve alıcı-verici çıkışları.</p>
       <div class="service-tag-list">
-        <span class="service-tag">Döküm Şiber</span>
-        <span class="service-tag">Klepe Kaplin</span>
+        <span class="service-tag">Döküm vana</span>
+        <span class="service-tag">Klepe lastiği</span>
         <span class="service-tag">Conta</span>
       </div>
     </div>
     <div class="service-card">
       <span class="service-icon">🛡️</span>
       <h3 class="service-name">Teknik Danışmanlık</h3>
-      <p class="service-desc">Proje bazlı teknik danışmanlık ve çözüm ortaklığı. Deneyimli ekibimizle en doğru sistemi birlikte belirleyelim.</p>
+      <p class="service-desc">Tecrübemizle ihtiyacınıza en uygun ürün ve çözümleri sunuyoruz.</p>
       <div class="service-tag-list">
-        <span class="service-tag">Proje</span>
         <span class="service-tag">Danışmanlık</span>
         <span class="service-tag">Çözüm</span>
       </div>
@@ -536,7 +547,7 @@
     <h2 class="section-title">Güvenilir Sulama Çözümleri</h2>
     <p class="section-body">Sucu Bekir adıyla tanınan babadan oğula aktarılan tecrübemizle, yağmurlama sistemlerinde öncü bir rol üstleniyoruz. Akım Tesisat olarak, kaliteden ödün vermeyen hizmet anlayışımız ve müşteri memnuniyeti odaklı vizyonumuzla tarımsal sulamada güvenilir çözüm ortağınızız.</p>
     <div class="about-person">
-      <img class="person-avatar" src="ChatGPT Image 1 Haz 2026 21_07_32.png" alt="Akım Tesisat logosu">
+      <div class="person-initials" aria-label="Necati Erden">NE</div>
       <div class="person-info">
         <strong>Necati Erden</strong>
         <span>Firma Sahibi – Akım Tesisat</span>
@@ -552,25 +563,26 @@
   <div class="products-header">
     <span class="section-tag">Stok Ürünlerimiz</span>
     <h2 class="section-title">Ürün Kataloğu</h2>
-    <p class="section-body">Hızlı tedarik, geniş stok. İhtiyacınız olan tüm tesisat malzemeleri tek adreste.</p>
+    <p class="section-body">Hızlı tedarik, geniş stok. İhtiyacınız olan tüm sulama malzemeleri tek adreste.</p>
   </div>
   <div class="products-grid">
-    <div class="product-item"><div class="product-dot"></div><span class="product-name">Sulama Malzemeleri</span></div>
-    <div class="product-item"><div class="product-dot"></div><span class="product-name">Yer Altı Sulama Sistemi</span></div>
-    <div class="product-item"><div class="product-dot"></div><span class="product-name">Yer Üstü Sulama Sistemi</span></div>
-    <div class="product-item"><div class="product-dot"></div><span class="product-name">Yağmurlama Sulama Ekipmanı</span></div>
-    <div class="product-item"><div class="product-dot"></div><span class="product-name">Flanş Fittings</span></div>
-    <div class="product-item"><div class="product-dot"></div><span class="product-name">Süzgeçli Dip Klepe</span></div>
-    <div class="product-item"><div class="product-dot"></div><span class="product-name">Sondaj Tulumbası</span></div>
+    <div class="product-item"><div class="product-dot"></div><span class="product-name">Kısa Tip Klepe</span></div>
+    <div class="product-item"><div class="product-dot"></div><span class="product-name">Uzun Tip Klepe</span></div>
+    <div class="product-item"><div class="product-dot"></div><span class="product-name">TE Klepe</span></div>
+    <div class="product-item"><div class="product-dot"></div><span class="product-name">Sondaj Klepesi</span></div>
+    <div class="product-item"><div class="product-dot"></div><span class="product-name">Kuyu Borusu</span></div>
+    <div class="product-item"><div class="product-dot"></div><span class="product-name">Sac Tulumba</span></div>
     <div class="product-item"><div class="product-dot"></div><span class="product-name">Santrafüj Klepesi</span></div>
-    <div class="product-item"><div class="product-dot"></div><span class="product-name">Alıcı Verici Çıkışları</span></div>
-    <div class="product-item"><div class="product-dot"></div><span class="product-name">Döküm Şiber</span></div>
-    <div class="product-item"><div class="product-dot"></div><span class="product-name">Küresel Vana</span></div>
-    <div class="product-item"><div class="product-dot"></div><span class="product-name">Klepe Kaplin</span></div>
-    <div class="product-item"><div class="product-dot"></div><span class="product-name">Flanş Contaları</span></div>
-    <div class="product-item"><div class="product-dot"></div><span class="product-name">Mekanik Tesisat Malzemeleri</span></div>
-    <div class="product-item"><div class="product-dot"></div><span class="product-name">Boru & Fitting Sistemleri</span></div>
+    <div class="product-item"><div class="product-dot"></div><span class="product-name">Flanş</span></div>
+    <div class="product-item"><div class="product-dot"></div><span class="product-name">Manşonlu Ara Klepesi</span></div>
+    <div class="product-item"><div class="product-dot"></div><span class="product-name">Dişli Hortum Ucu</span></div>
+    <div class="product-item"><div class="product-dot"></div><span class="product-name">Galvanizli Kelepçe</span></div>
+    <div class="product-item"><div class="product-dot"></div><span class="product-name">Delikli Kaplin Lastiği</span></div>
+    <div class="product-item"><div class="product-dot"></div><span class="product-name">Klepe Lastiği</span></div>
+    <div class="product-item"><div class="product-dot"></div><span class="product-name">Flanş Contası</span></div>
+    <div class="product-item"><div class="product-dot"></div><span class="product-name">Fittings Malzemeleri</span></div>
     <div class="product-item"><div class="product-dot"></div><span class="product-name">Pompa Aksesuarları</span></div>
+      <div class="product-item"><div class="product-dot"></div><span class="product-name">Alıcı Verici Çıkışları</span></div>
   </div>
 </section>
 
@@ -581,7 +593,6 @@
   <div>
     <span class="section-tag">Bize Ulaşın</span>
     <h2 class="section-title">İletişim</h2>
-    <p class="section-body">Projeniz için ücretsiz keşif ve teknik danışmanlık almak ister misiniz? Hemen arayın.</p>
     <a class="btn-whatsapp contact-whatsapp-cta" href="https://wa.me/905356196753?text=Merhaba%20Ak%C4%B1m%20Tesisat%2C%20hizmetleriniz%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener">WhatsApp'tan Mesaj G&ouml;nder</a>
     <div class="contact-info-block" style="margin-top: 48px;">
       <div class="contact-item">
@@ -596,7 +607,7 @@
         <div class="contact-icon">🏪</div>
         <div>
           <div class="contact-item-label">Firma</div>
-          <div class="contact-item-val">Akım Tesisat – Sucu Bekir</div>
+          <div class="contact-item-val">Akım Tesisat </div>
           <div class="contact-item-sub">Yağmurlama ve Sulama Malzemeleri</div>
         </div>
       </div>
@@ -604,8 +615,8 @@
         <div class="contact-icon">🕐</div>
         <div>
           <div class="contact-item-label">Çalışma Saatleri</div>
-          <div class="contact-item-val">Hafta içi: 08:00 – 18:00</div>
-          <div class="contact-item-sub">Cumartesi: 08:00 – 14:00</div>
+          <div class="contact-item-val">Hafta içi: 08:00 – 19:00</div>
+          <div class="contact-item-sub">Cumartesi: 08:00 – 19:00</div>
         </div>
       </div>
     </div>
@@ -628,9 +639,6 @@
           <option value="">Bir hizmet seçin…</option>
           <option>Sulama Sistemi Kurulumu</option>
           <option>Yağmurlama Sistemi</option>
-          <option>Sondaj Tulumbası</option>
-          <option>Mekanik Tesisat</option>
-          <option>Teknik Danışmanlık</option>
           <option>Diğer</option>
         </select>
       </div>
